@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: ${JDBC_URL:jdbc:postgresql://localhost:5432/integration_lab}
+    username: ${DB_USER:integration}
+    password: ${DB_PASSWORD:integration}
+    driver-class-name: org.postgresql.Driver
