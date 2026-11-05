@@ -1,0 +1,19 @@
+name: Mejora propuesta
+description: Proponé una mejora verificable para el laboratorio.
+title: "idea: "
+labels: ["good first issue"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema o decisión técnica
+      description: Explicá qué comportamiento o decisión de integración se quiere demostrar.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Criterios de aceptación
+      description: Indicá qué prueba, documentación o resultado observable validará el cambio.
+    validations:
+      required: true

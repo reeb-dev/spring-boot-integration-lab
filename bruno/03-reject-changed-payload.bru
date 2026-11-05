@@ -1,0 +1,29 @@
+meta {
+  name: Reject changed payload
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8080/api/migrations
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: demo
+  password: demo
+}
+
+headers {
+  Content-Type: application/json
+  Idempotency-Key: migration-legacy-42-v1
+}
+
+body:json {
+  {
+    "legacyReference": "LEGACY-42",
+    "targetSystem": "billing-v3",
+    "retry": false
+  }
+}
